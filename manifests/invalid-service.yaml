@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+spec:
+  type: ClusterIP
+  ports:
+    - name: service
+      targetPort: 80
+      protocol: TCP
+      invalidAdditionalField: invalid

@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: account
+spec:
+  replicas: many
+  template:
+    spec:
+      containers:
+        - name: ngix
+          image: ngix
+          ports:
+            - name: grpc
+              protocol: TCP
+              invalidAdditionalField: invalid
